@@ -1,0 +1,10 @@
+{
+  "html.hover.documentation": false,
+  "less.hover.documentation": false,
+  "less.hover.references": false,
+  "scss.hover.documentation": false,
+  "scss.hover.references": false,
+  "cSpell.words": [
+    "Задание"
+  ]
+}
