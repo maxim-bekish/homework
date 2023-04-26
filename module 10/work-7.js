@@ -3,7 +3,6 @@ let arrNumber = [];
 for (i = 0; i < arr.length; i++) {
   if (typeof arr[i] == "number") {
     arrNumber.push(arr[i]);
-  } else {
   }
 }
 let x = 0;
@@ -21,4 +20,7 @@ for (i = 0; i < arrNumber.length; i++) {
     y++;
   }
 }
-console.log(`Четных-${x}, Не четных-${y}, Нулей-${z}, Значений NaN-${n}`);
+console.log(arr)
+console.log(
+  `В миссиве четных-${x}, не четных-${y}, нулей-${z}, значений NaN-${n}`
+);
