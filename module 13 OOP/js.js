@@ -10,3 +10,10 @@
 //   });
 // })();
 
+////// Задание 13.0.2 (на самопроверку)
+
+// let createCounter = function (counter) {
+//   setInterval(() => counter++, 1000);
+// };
+// createCounter(8)
+
