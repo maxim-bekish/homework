@@ -2,7 +2,18 @@ let inputOne = document.querySelector(".inputOne");
 let inputTwo = document.querySelector(".inputTwo");
 let content = document.querySelector(".content");
 
+document.addEventListener("DOMContentLoaded", () => {
+  let one = localStorage.getItem("one");
+  let two = localStorage.getItem("two");
+  if (1 <= one && one <= 10 && 1 <= two && two <= 10) {
+    request(one, two);
+  }
+});
+
 document.querySelector(".button").addEventListener("click", displayResult);
+document
+  .querySelector(".buttonClearStorage")
+  .addEventListener("click", () => localStorage.clear());
 
 function displayResult() {
   let numberOne = inputOne.value;
@@ -11,7 +22,7 @@ function displayResult() {
   let x;
 
   valid(numberOne, numberTwo, validity);
-
+  recordLocalStorage(numberOne, numberTwo);
   validity.forEach((el) => (x = el));
   if (x) {
     request(numberOne, numberTwo);
@@ -58,4 +69,9 @@ function valid(numberOne, numberTwo, validity) {
     return (content.innerHTML =
       "Номер страницы и лимит вне диапазона от 1 до 10");
   }
+}
+
+function recordLocalStorage(numberOne, numberTwo) {
+  localStorage.setItem("one", numberOne);
+  localStorage.setItem("two", numberTwo);
 }
