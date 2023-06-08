@@ -5,8 +5,11 @@ let content = document.querySelector(".content");
 document.addEventListener("DOMContentLoaded", () => {
   let one = localStorage.getItem("one");
   let two = localStorage.getItem("two");
+
   if (1 <= one && one <= 10 && 1 <= two && two <= 10) {
+    // if(){
     request(one, two);
+    // }
   }
 });
 
@@ -34,15 +37,19 @@ async function request(numberOne, numberTwo) {
     `https://jsonplaceholder.typicode.com/photos?_page=${numberOne}&_limit=${numberTwo}`
   );
   api = await res.json();
-  let card = "";
-  api.forEach((el) => {
-    let cards = `<img
+  if (res.status == "200") {
+    let card = "";
+    api.forEach((el) => {
+      let cards = `<img
           src="${el.url}"
           class="card-image"
         />`;
-    card = card + cards;
-  });
-  content.innerHTML = card;
+      card = card + cards;
+    });
+    content.innerHTML = card;
+  } else {
+    card.innerHTML = `Код ошибки ${res.status}`;
+  }
 }
 
 function valid(numberOne, numberTwo, validity) {
