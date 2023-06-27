@@ -1,7 +1,5 @@
-const url = "wss://echo-ws-service.herokuapp.com";
-let counterClass = 0;
 let socket = new WebSocket("wss://echo-ws-service.herokuapp.com");
-let input = document.getElementById("input");
+let counterClass = 0;
 
 function createText(message, classN, tag, latitude, longitude) {
   counterClass++;
@@ -24,10 +22,10 @@ function createText(message, classN, tag, latitude, longitude) {
       break;
   }
   document.getElementById("messages").append(elemDiv);
-  document.getElementById(`elemDiv${counterClass}`).prepend(elem);
+  document.getElementById(`elemDiv${counterClass}`).append(elem);
 }
-
 document.getElementById("button_message").addEventListener("click", () => {
+  let input = document.getElementById("input");
   if (!input.value.trim()) {
     input.value = "";
     input.placeholder = "You need to enter text sms";
