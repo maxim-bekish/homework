@@ -52,7 +52,10 @@ document.getElementById("button_geolocation").addEventListener("click", () => {
     navigator.geolocation.getCurrentPosition(success, error);
     function success(position) {
       const { coords } = position;
-      createText("Open link", "user", "a", coords.latitude, coords.longitude);
+      socket.send(``);
+      socket.onmessage = function () {
+        createText("Open link", "user", "a", coords.latitude, coords.longitude);
+      };
     }
     function error(err) {
       createText(err.message, "error", "span");
