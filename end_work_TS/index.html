@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>end Work TS</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/all.css" />
   </head>
   <body>
     <main class="container">
@@ -13,22 +20,33 @@
           <span>Комментарии</span>
           <span>(80)</span>
         </div>
-        <div class="menu_filter"></div>
+        <div class="menu_filter">
+          <span> По количеству оценок</span>
+          <span>▼</span>
+        </div>
         <div class="menu_favorites">
           <span>Избранное</span>
+          <img src="./svg/heart.svg" alt="" />
         </div>
       </nav>
       <div class="inputForm">
-        <div class="inputForm_avatar">
-          <img src="#" alt="avatar" />
+        <div class="inputForm_avatar avatar">
+          <img src="./img/test-1.jpg" alt="avatar" />
         </div>
         <div class="inputForm_main">
           <div>
-            <h3 class="inputForm_main_name">Name</h3>
+            <h3 class="inputForm_main_name">Максим Авдеенко</h3>
             <span>Макс. 1000 символов</span>
           </div>
           <div>
-            <input class="inputForm_main_input" type="text" />
+            <textarea
+              placeholder="Введите текст сообщения..."
+              class="inputForm_main_input"
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
           </div>
         </div>
         <div class="inputForm_button">
@@ -37,8 +55,8 @@
       </div>
       <div class="commentForm">
         <div class="comment">
-          <div class="comment_avatar inputForm_avatar">
-            <img src="#" alt="avatar" />
+          <div class="comment_avatar avatar">
+            <img src="./img/test-1.jpg" alt="avatar" />
           </div>
           <div class="comment_body">
             <div class="comment_body_header">
@@ -56,8 +74,15 @@
               один раз в лучшем случае.
             </div>
             <div class="comment_body_footer">
-              <span>Ответ</span>
-              <span>В избранном</span>
+              <div>
+                <img src="./svg/share.svg" />
+                <span> Ответ</span>
+              </div>
+              <div>
+                <img src="./svg/heart-2.svg" />
+                <span>В избранном </span>
+              </div>
+
               <div class="counter">
                 <div>-</div>
                 <div>6</div>
@@ -67,12 +92,13 @@
           </div>
         </div>
         <div class="answer">
-          <div class="answer_avatar">
-            <img src="#" alt="#" />
+          <div class="answer_avatar avatar">
+            <img src="./img/test-1.jpg" alt="avatar" />
           </div>
           <div class="answer_body">
             <div class="answer_body_header">
               <h3>Джунбокс3000</h3>
+              <img src="./svg/share.svg" alt="share" />
               <span>Алексей_1994b </span>
               <span>15.01 15:18</span>
             </div>
@@ -84,7 +110,11 @@
               объективности в отзывах самый минимум.
             </div>
             <div class="answer_body_footer">
-              <span> В Избранное </span>
+              <div>
+                <img src="./svg/heart-3.svg" alt="" />
+                <span> В Избранное </span>
+              </div>
+
               <div class="counter">
                 <div>-</div>
                 <div>3</div>
